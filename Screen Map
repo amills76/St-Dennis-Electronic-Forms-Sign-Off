@@ -1,0 +1,27 @@
+Screen 1 - Select Parent Login
+           Select Admin Login
+
+  Screen 2 - Enter User Id
+             Enter Password
+             Submit
+
+    Screen 3 - Display All Parents
+               First Name
+               Last Name
+               Child First Name
+               Child Last Name
+               Child Grade
+               All Forms Signed Off Flag
+               Send Email Alert Button
+
+  Screen 4 - Enter First Name
+             Enter Last Name
+             Submit
+
+    Screen 5 - If First and Last Name found display list of children
+               If First and Last Name not found display no found message
+
+  
+      Screen 6 - Listing of Links to all forms for the child
+
+        Screen 7 - Display PDF
