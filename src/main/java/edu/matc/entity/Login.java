@@ -1,12 +1,9 @@
 package edu.matc.entity;
 
-import edu.matc.util.LocalDateAttributeConverter;
-
 import javax.persistence.*;
-import java.time.LocalDate;
 
 /**
- * A class to represent a user.
+ * A class to represent a login.
  *
  * @author Andy Mills
  */

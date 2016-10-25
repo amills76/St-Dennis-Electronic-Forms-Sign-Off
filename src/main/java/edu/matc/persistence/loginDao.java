@@ -113,7 +113,7 @@ public class loginDao {
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
-            session.update(login;
+            session.update(login);
             transaction.commit();
         }catch (HibernateException e) {
             if (transaction != null) {

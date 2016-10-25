@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - std_forms@localhost" uuid="7f6082e6-848e-47be-9168-35758aa93a7e">
+    <database-info product="MySQL" version="5.7.13-0ubuntu0.16.04.2" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="std_forms">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="information_schema"/>
+      <schema id="3" name="mysql"/>
+      <schema id="4" name="performance_schema"/>
+      <schema id="5" name="phpmyadmin"/>
+      <schema id="6" name="SAMPLE"/>
+      <schema id="7" name="sys"/>
+      <table id="8" parent="1" name="login"/>
+      <table id="9" parent="1" name="parent"/>
+      <table id="10" parent="1" name="admin"/>
+      <table id="11" parent="1" name="admin_access"/>
+      <table id="12" parent="1" name="forms"/>
+      <table id="13" parent="1" name="student"/>
+      <table id="14" parent="1" name="student_forms"/>
+      <column id="15" parent="8" name="login_id_nr">
+        <mandatory>1</mandatory>
+        <data-type>int(9)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="16" parent="8" name="user_id">
+        <data-type>varchar(15)|0</data-type>
+      </column>
+      <column id="17" parent="8" name="password">
+        <data-type>varchar(15)|0</data-type>
+      </column>
+      <column id="18" parent="8" name="access_level">
+        <data-type>char(6)|0</data-type>
+      </column>
+      <index id="19" parent="8" name="user_id">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="20" parent="8" name="PRIMARY">
+        <columns>login_id_nr</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="21" parent="8" name="login_ibfk_1">
+        <columns>user_id</columns>
+        <ref-key>~.parent.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="22" parent="8" name="login_ibfk_2">
+        <columns>user_id</columns>
+        <ref-key>~.admin.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="23" parent="9" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)|0</data-type>
+      </column>
+      <column id="24" parent="9" name="first_name">
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="25" parent="9" name="last_name">
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="26" parent="9" name="email_address">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <key id="27" parent="9" name="PRIMARY">
+        <columns>user_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="28" parent="10" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)|0</data-type>
+      </column>
+      <column id="29" parent="10" name="admin_level">
+        <data-type>char(3)|0</data-type>
+      </column>
+      <key id="30" parent="10" name="PRIMARY">
+        <columns>user_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="31" parent="11" name="admin_access_id">
+        <mandatory>1</mandatory>
+        <data-type>int(9)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="32" parent="11" name="admin_level">
+        <data-type>char(3)|0</data-type>
+      </column>
+      <column id="33" parent="11" name="grade">
+        <data-type>char(2)|0</data-type>
+      </column>
+      <key id="34" parent="11" name="PRIMARY">
+        <columns>admin_access_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="35" parent="12" name="form_id">
+        <mandatory>1</mandatory>
+        <data-type>int(9)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="36" parent="12" name="form_name">
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="37" parent="12" name="form_url">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <key id="38" parent="12" name="PRIMARY">
+        <columns>form_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="39" parent="13" name="student_id">
+        <mandatory>1</mandatory>
+        <data-type>int(9)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="40" parent="13" name="first_name">
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="41" parent="13" name="last_name">
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="42" parent="13" name="grade">
+        <data-type>char(2)|0</data-type>
+      </column>
+      <key id="43" parent="13" name="PRIMARY">
+        <columns>student_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="44" parent="14" name="student_form_id">
+        <mandatory>1</mandatory>
+        <data-type>int(9)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="45" parent="14" name="student_id">
+        <data-type>int(9)|0</data-type>
+      </column>
+      <column id="46" parent="14" name="form_id">
+        <data-type>int(9)|0</data-type>
+      </column>
+      <column id="47" parent="14" name="review_date">
+        <data-type>date|0</data-type>
+      </column>
+      <column id="48" parent="14" name="review_user_id">
+        <data-type>varchar(15)|0</data-type>
+      </column>
+      <index id="49" parent="14" name="form_id">
+        <columns>form_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="50" parent="14" name="student_id">
+        <columns>student_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="51" parent="14" name="PRIMARY">
+        <columns>student_form_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="52" parent="14" name="student_forms_ibfk_1">
+        <columns>student_id</columns>
+        <ref-key>~.student.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="53" parent="14" name="student_forms_ibfk_2">
+        <columns>form_id</columns>
+        <ref-key>~.forms.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>

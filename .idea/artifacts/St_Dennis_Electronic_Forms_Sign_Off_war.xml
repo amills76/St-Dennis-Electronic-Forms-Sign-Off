@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="St-Dennis-Electronic-Forms-Sign-Off:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="stdennisforms.war">
+      <element id="artifact" artifact-name="St-Dennis-Electronic-Forms-Sign-Off:war exploded" />
+    </root>
+  </artifact>
+</component>
